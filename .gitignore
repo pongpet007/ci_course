@@ -1,1 +1,5 @@
 /personal/*
+/admin/system/*
+/admin/user_guide/*
+/admin/application/cache/*
+/admin/application/config/config.php
