@@ -6,6 +6,11 @@
 		}
 	}
 
+	.section-padding30 {
+		padding-top: 30px;
+		padding-bottom: 30px;
+	}
+
 	.section-tittle h2 {    
     	font-size: 35px;
 	}
