@@ -25,31 +25,45 @@
                             <nav>                                                
                                 <ul id="navigation">  
                                     <li><a href="index.html">
-                        <?=$lang=='TH'?'หน้าแรก':'Home'?>
+                        <? echo lang("home")  ?>
                                     </a></li>
                                     <li><a href="shop.html">
-                        <?=$lang=='TH'?'สินค้าในร้าน':'Shop'?>
+                        <? echo lang("shop")  ?>
                                     </a></li>
                                     <li><a href="about.html">
-                        <?=$lang=='TH'?'เกี่ยวกับเรา':'About'?>
+                        <? echo lang("about")  ?>
                                     </a></li>
                                     <li><a href="contact.html">
-                        <?=$lang=='TH'?'ติดต่อเรา':'Contact'?>
+                        <? echo lang("contact")  ?>
                                     </a></li>
                                 </ul>
                             </nav>
                         </div>
                         <!-- Header Right -->
+<style type="text/css">
+    .lang a{
+        color : black;
+    }
+    .lang a:hover{
+        color: orange;
+    }
+</style>                        
                         <div class="header-right">
                             <ul>
-                                <li>
-                                    <a href="">
-                                    <?php if($lang=='TH'){ ?>
-                                        <img src="<?=base_url("assets/TH.png")?>">
-                                    <?php }else{ ?>
-                                        <img src="<?=base_url("assets/GB.png")?>">
-                                    <?php } ?>
-                                    </a>
+                                <li class="lang">
+       
+        <?php 
+
+        if($lang=='TH'){ ?> 
+            <a href="<?=base_url("SwitchLanguage/changeTo/EN") ?>">
+                change to  <img src="<?=base_url("assets/GB.png")?>">
+            </a>
+        <?php }else{ ?>
+            <a href="<?=base_url("SwitchLanguage/changeTo/TH") ?>">
+                เปลี่ยนภาษา <img src="<?=base_url("assets/TH.png")?>">
+            </a>
+        <?php } ?>
+       
                                 </li>
                                 <li>
                                     <div class="nav-search search-switch">
