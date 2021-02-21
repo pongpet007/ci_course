@@ -6,13 +6,18 @@ class WebCart extends CI_controller
 	{
 		parent::__construct();
 		$this->load->model('Products_model');
-
+		if($this->session->userdata('language')==''){
+			$this->session->set_userdata('language','TH');
+		}
+		$this->lang->load($this->session->userdata('language'), 'lang');
+		
 	}
 
 	public function index()
 	{
-		$cartxx = $this->cart->contents();		
-		print_r($cartxx);
+		$data['lang'] = $this->session->userdata('language');
+		
+		$this->load->view('watchshop/cart',$data);
 	}
 
 	public function add()
@@ -40,11 +45,25 @@ class WebCart extends CI_controller
 
 	public function edit()
 	{
+		$qty = $this->input->post('qty');
+		$rowid = $this->input->post('rowid');
+		$data = array();
+		foreach ($qty as $key=>$qty_item) {
+			$data[] = array(
+				'rowid'=>$rowid[$key],
+				'qty'=>$qty[$key],
+			);
+		}
+		
+		$this->cart->update($data);
+		
 		redirect("WebCart/index");
+		
 	}
 
-	public function delete($pro_id)
+	public function delete($rowid)
 	{
+		$this->cart->remove($rowid);
 		redirect("WebCart/index");
 	}
 
