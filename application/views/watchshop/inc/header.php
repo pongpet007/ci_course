@@ -27,13 +27,13 @@
                                     <li><a href="<?=base_url()?>">
                         <? echo lang("home")  ?>
                                     </a></li>
-                                    <li><a href="<?=base_url()?>">
+                                    <li><a href="<?=base_url("Home/Products")?>">
                         <? echo lang("shop")  ?>
                                     </a></li>
-                                    <li><a href="<?=base_url()?>">
+                                    <li><a href="<?=base_url("Home/Aboutus")?>">
                         <? echo lang("about")  ?>
                                     </a></li>
-                                    <li><a href="<?=base_url()?>">
+                                    <li><a href="<?=base_url("Home/Contactus")?>">
                         <? echo lang("contact")  ?>
                                     </a></li>
                                 </ul>

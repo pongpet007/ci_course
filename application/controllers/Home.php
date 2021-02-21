@@ -36,6 +36,21 @@ class Home extends CI_Controller
 		$this->load->view('watchshop/index',$data);
 	}
 
+	public function Products()
+	{
+		echo "Products";
+	}
+
+	public function Aboutus()
+	{
+		echo "About us";
+	}
+
+	public function Contactus()
+	{
+		echo " Contact us ";
+	}
+
 	public function productDetail($pro_id)
 	{
 		$data['lang'] = $this->session->userdata('language');
