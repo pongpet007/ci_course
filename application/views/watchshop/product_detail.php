@@ -4,11 +4,18 @@
     <? $this->load->view('watchshop/inc/title') ?>
 </head>
 
+<<<<<<< HEAD
 <body>
     
     <?php $this->load->view('watchshop/inc/header') ?>
     
     <main>
+=======
+<body>    
+    <?php $this->load->view('watchshop/inc/header') ?>
+    <main>
+       
+>>>>>>> 2e03fc296159b1f04f5aeb9670595fda4b9909fd
         <!--================Single Product Area =================-->
         <div class="product_image_area">
             <div class="container">
@@ -16,17 +23,26 @@
                 <div class="col-lg-6 col-md-6 col-sm-12">
                 <div class="product_img_slide owl-carousel">
                     <?php 
+<<<<<<< HEAD
                         $filepath = "product/pro_{$product->pro_id}01.jpg";
                         if(is_file($filepath)) 
                     { ?>
                     <div class="single_product_img">
                         <img src="<?= base_url($filepath) ?>" alt="#" class="img-fluid">
+=======
+                    $filepath = "product/pro_{$product->pro_id}01.jpg";
+                    if(is_file($filepath)){
+                    ?>
+                    <div class="single_product_img">
+                        <img src="<?=base_url($filepath) ?>" alt="#" class="img-fluid">
+>>>>>>> 2e03fc296159b1f04f5aeb9670595fda4b9909fd
                     </div>
                     <?php } ?>
                 </div>
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-12">
                 <div class="single_product_text text-center">
+<<<<<<< HEAD
                     <h3><?= $lang=='TH'?$product->pro_name_th:$product->pro_name_en; ?></h3>
                     <p>
                         <?= $lang=='TH'?$product->pro_desc_th:$product->pro_desc_en; ?>
@@ -45,17 +61,48 @@
                         ?>
                         <div class="product_count_area">
                             <p><?= lang("quantity") ?></p>
+=======
+                    <h3>
+    <?= $lang=='TH'?$product->pro_name_th:$product->pro_name_en; ?>
+                    </h3>
+                    <p>
+    <?= $lang=='TH'?$product->pro_desc_th:$product->pro_desc_en; ?>
+                    </p>
+                    <div class="card_area">
+                        <?php 
+                        $attr = array(
+                                'method'=>'post',
+                                'id'=>'frmcart',
+                                'name'=>'frmcart',
+                                'class'=>'',
+                        );
+                        $hidden = array(
+                                'pro_id' => $product->pro_id, 
+                                'pro_price' => $product->pro_price );
+                        echo form_open('WebCart/add', $attr , $hidden) ?>
+                        <div class="product_count_area">
+                            <p><?= lang('quantity') ?></p>
+>>>>>>> 2e03fc296159b1f04f5aeb9670595fda4b9909fd
                             <div class="product_count d-inline-block">
                                 <span class="product_count_item inumber-decrement"> <i class="ti-minus"></i></span>
                                 <input class="product_count_item input-number" type="text" name="qty" value="1" min="0" max="10">
                                 <span class="product_count_item number-increment"> <i class="ti-plus"></i></span>
                             </div>
+<<<<<<< HEAD
                             <p><?=number_format($product->pro_price,0)?>.-</p>
                         </div>
                     <div class="add_to_cart">
                         <button type="submit" class="btn_3"><?=lang("addtocart");?></button>
                     </div>
                     <?php echo form_close(); ?>
+=======
+                            <p><?= number_format($product->pro_price,2) ?></p>
+                        </div>
+                        <div class="add_to_cart">
+                            <button type="submit" class="btn_3"><?=lang('addtocart') ?></button>
+                        </div>
+                        <?php echo form_close(); ?>
+>>>>>>> 2e03fc296159b1f04f5aeb9670595fda4b9909fd
                     </div>
                 </div>
                 </div>
@@ -63,6 +110,7 @@
             </div>
         </div>
         <!--================End Single Product Area =================-->
+<<<<<<< HEAD
         <!-- subscribe part here -->
         <section class="subscribe_part section_padding">
             <div class="container">
@@ -81,6 +129,9 @@
             </div>
         </section>
         <!-- subscribe part end -->
+=======
+               
+>>>>>>> 2e03fc296159b1f04f5aeb9670595fda4b9909fd
     </main>
     <?php $this->load->view('watchshop/inc/footer') ?>
 

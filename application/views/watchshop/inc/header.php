@@ -18,12 +18,13 @@
                     <div class="menu-wrapper">
                         <!-- Logo -->
                         <div class="logo">
-                            <a href="index.html"><img src="<?=base_url() ?>assets/img/logo/logo.png" alt=""></a>
+                            <a href="<?=base_url()?>"><img src="<?=base_url() ?>assets/img/logo/logo.png" alt=""></a>
                         </div>
                         <!-- Main-menu -->
                         <div class="main-menu d-none d-lg-block">
                             <nav>                                                
                                 <ul id="navigation">  
+<<<<<<< HEAD
                                     <li><a href="index.html">
                         <?php echo lang("home"); ?>
                                     </a></li>
@@ -35,14 +36,36 @@
                                     </a></li>
                                     <li><a href="contact.html">
                         <?php echo lang("contact"); ?>
+=======
+                                    <li><a href="<?=base_url()?>">
+                        <? echo lang("home")  ?>
+                                    </a></li>
+                                    <li><a href="<?=base_url("Home/Products")?>">
+                        <? echo lang("shop")  ?>
+                                    </a></li>
+                                    <li><a href="<?=base_url("Home/Aboutus")?>">
+                        <? echo lang("about")  ?>
+                                    </a></li>
+                                    <li><a href="<?=base_url("Home/Contactus")?>">
+                        <? echo lang("contact")  ?>
+>>>>>>> 2e03fc296159b1f04f5aeb9670595fda4b9909fd
                                     </a></li>
                                 </ul>
                             </nav>
                         </div>
                         <!-- Header Right -->
+<style type="text/css">
+    .lang a{
+        color : black;
+    }
+    .lang a:hover{
+        color: orange;
+    }
+</style>                        
                         <div class="header-right">
                             <ul>
                                 <li class="lang">
+<<<<<<< HEAD
                                     <?php if($lang=='TH'){ ?>
                                         <a href="<?php echo base_url("SwitchLanguage/changeTo/EN"); ?>">
                                             change to <img src="<?=base_url("assets/GB.png")?>">
@@ -52,6 +75,21 @@
                                         เปลี่ยนภาษา <img src="<?=base_url("assets/TH.png")?>">
                                         </a>
                                     <?php } ?>
+=======
+       
+        <?php 
+
+        if($lang=='TH'){ ?> 
+            <a href="javascript: changelange('EN');">
+                change to  <img src="<?=base_url("assets/GB.png")?>">
+            </a>
+        <?php }else{ ?>
+            <a href="javascript: changelange('TH');">
+                เปลี่ยนภาษา <img src="<?=base_url("assets/TH.png")?>">
+            </a>
+        <?php } ?>
+       
+>>>>>>> 2e03fc296159b1f04f5aeb9670595fda4b9909fd
                                 </li>
                                 <li>
                                     <div class="nav-search search-switch">
@@ -59,7 +97,7 @@
                                     </div>
                                 </li>
                                 <li> <a href="login.html"><span class="flaticon-user"></span></a></li>
-                                <li><a href="cart.html"><span class="flaticon-shopping-cart"></span></a> </li>
+                                <li><a href="<?=base_url("WebCart") ?>"><span class="flaticon-shopping-cart" style="padding-right:0px;"></span> <b style="font-size:11px;">(<?=$this->cart->total_items() ?>)</b> </a> </li>
                             </ul>
                         </div>
                     </div>
