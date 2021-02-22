@@ -15,4 +15,12 @@
     	font-size: 35px;
 	}
 
+	.lang a{
+		color:black;
+	}
+
+	.lang a:hover{
+		color:orange;
+	}
+
 </style>

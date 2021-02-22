@@ -25,16 +25,16 @@
                             <nav>                                                
                                 <ul id="navigation">  
                                     <li><a href="index.html">
-                        <?=$lang=='TH'?'หน้าแรก':'Home'?>
+                        <?php echo lang("home"); ?>
                                     </a></li>
                                     <li><a href="shop.html">
-                        <?=$lang=='TH'?'สินค้าในร้าน':'Shop'?>
+                        <?php echo lang("shop"); ?>
                                     </a></li>
                                     <li><a href="about.html">
-                        <?=$lang=='TH'?'เกี่ยวกับเรา':'About'?>
+                        <?php echo lang("about"); ?>
                                     </a></li>
                                     <li><a href="contact.html">
-                        <?=$lang=='TH'?'ติดต่อเรา':'Contact'?>
+                        <?php echo lang("contact"); ?>
                                     </a></li>
                                 </ul>
                             </nav>
@@ -42,14 +42,16 @@
                         <!-- Header Right -->
                         <div class="header-right">
                             <ul>
-                                <li>
-                                    <a href="">
+                                <li class="lang">
                                     <?php if($lang=='TH'){ ?>
-                                        <img src="<?=base_url("assets/TH.png")?>">
+                                        <a href="<?php echo base_url("SwitchLanguage/changeTo/EN"); ?>">
+                                            change to <img src="<?=base_url("assets/GB.png")?>">
+                                        </a>
                                     <?php }else{ ?>
-                                        <img src="<?=base_url("assets/GB.png")?>">
+                                        <a href="<?php echo base_url("SwitchLanguage/changeTo/TH"); ?>">
+                                        เปลี่ยนภาษา <img src="<?=base_url("assets/TH.png")?>">
+                                        </a>
                                     <?php } ?>
-                                    </a>
                                 </li>
                                 <li>
                                     <div class="nav-search search-switch">
