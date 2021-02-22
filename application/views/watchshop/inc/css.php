@@ -15,20 +15,11 @@
     	font-size: 35px;
 	}
 
-<<<<<<< HEAD
-	.lang a{
-		color:black;
-	}
-
-	.lang a:hover{
-		color:orange;
-=======
 	a{
 		color:#007bff;
 	}
 	a:hover{
 		color:black;
->>>>>>> 2e03fc296159b1f04f5aeb9670595fda4b9909fd
 	}
 
 </style>

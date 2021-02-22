@@ -24,19 +24,6 @@
                         <div class="main-menu d-none d-lg-block">
                             <nav>                                                
                                 <ul id="navigation">  
-<<<<<<< HEAD
-                                    <li><a href="index.html">
-                        <?php echo lang("home"); ?>
-                                    </a></li>
-                                    <li><a href="shop.html">
-                        <?php echo lang("shop"); ?>
-                                    </a></li>
-                                    <li><a href="about.html">
-                        <?php echo lang("about"); ?>
-                                    </a></li>
-                                    <li><a href="contact.html">
-                        <?php echo lang("contact"); ?>
-=======
                                     <li><a href="<?=base_url()?>">
                         <? echo lang("home")  ?>
                                     </a></li>
@@ -48,7 +35,6 @@
                                     </a></li>
                                     <li><a href="<?=base_url("Home/Contactus")?>">
                         <? echo lang("contact")  ?>
->>>>>>> 2e03fc296159b1f04f5aeb9670595fda4b9909fd
                                     </a></li>
                                 </ul>
                             </nav>
@@ -65,17 +51,6 @@
                         <div class="header-right">
                             <ul>
                                 <li class="lang">
-<<<<<<< HEAD
-                                    <?php if($lang=='TH'){ ?>
-                                        <a href="<?php echo base_url("SwitchLanguage/changeTo/EN"); ?>">
-                                            change to <img src="<?=base_url("assets/GB.png")?>">
-                                        </a>
-                                    <?php }else{ ?>
-                                        <a href="<?php echo base_url("SwitchLanguage/changeTo/TH"); ?>">
-                                        เปลี่ยนภาษา <img src="<?=base_url("assets/TH.png")?>">
-                                        </a>
-                                    <?php } ?>
-=======
        
         <?php 
 
@@ -89,7 +64,6 @@
             </a>
         <?php } ?>
        
->>>>>>> 2e03fc296159b1f04f5aeb9670595fda4b9909fd
                                 </li>
                                 <li>
                                     <div class="nav-search search-switch">
