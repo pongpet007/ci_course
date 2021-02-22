@@ -36,6 +36,7 @@
         function changelange(lang)
         {
             $.get('<?=base_url("SwitchLanguage/changeTo/")?>'+lang,function(){
+                
                 window.location.reload();
             });
         }

@@ -18,7 +18,8 @@ class Home extends CI_Controller
 
 	public function index()
 	{
-		
+		// echo APPPATH;
+		// exit();
 		$data['lang'] = $this->session->userdata('language');
 
 		$config['base_url'] = base_url('Home/index/');	

@@ -47,6 +47,9 @@ class WebCart extends CI_controller
 	{
 		$qty = $this->input->post('qty');
 		$rowid = $this->input->post('rowid');
+		// print_r($qty);
+		// print_r($rowid);
+		// exit();
 		$data = array();
 		foreach ($qty as $key=>$qty_item) {
 			$data[] = array(
@@ -54,7 +57,8 @@ class WebCart extends CI_controller
 				'qty'=>$qty[$key],
 			);
 		}
-		
+		// print_r($data);
+		// exit();
 		$this->cart->update($data);
 		
 		redirect("WebCart/index");

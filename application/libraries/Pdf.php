@@ -11,8 +11,8 @@ class Pdf extends TCPDF
        	$this->SetFont('helvetica', 'B', 20);
         $this->ln(10);
         // Title
-        $this->Cell(0, 0, 'www.shop.com', 1, 1, 'C', 0, '', 0, false, 'M', 'M');
-         $this->ln(10);
+        $this->Cell(0, 0, 'www.watchshop.com', 0, 1, 'C', 0, '', 0, false, 'M', 'M');
+        $this->ln(10);
     }
 
 
@@ -23,7 +23,7 @@ class Pdf extends TCPDF
         // Set font
        	$this->SetFont('freeserif', '', 8, '', true); 
         // Page number
-        $this->Cell(0, 8, 'Page '.$this->getAliasNumPage().'/'.$this->getAliasNbPages(), 1, false, 'C', 0, '', 0, false, 'T', 'M');
+        $this->Cell(0, 8, 'Page '.$this->getAliasNumPage().'/'.$this->getAliasNbPages(), 0, false, 'C', 0, '', 0, false, 'T', 'M');
     }
 
 }

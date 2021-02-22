@@ -43,7 +43,12 @@
                             </div>
                             <div class="popular-caption">
         <h3>
-        <a href="<?=base_url("Home/productDetail/$product->pro_id")?>" target="_blank">
+        <?php 
+            $pro_name = $lang=='TH'?$product->pro_name_th:$product->pro_name_en;
+            // $url = base_url("Home/productDetail/$product->pro_id");
+            $url = "$pro_name" . '-p' . $product->pro_id;
+        ?>    
+        <a href="<?= $url ?>" target="_blank">
         <?= $lang=='TH'?$product->pro_name_th:$product->pro_name_en; ?>
         </a>
         </h3>

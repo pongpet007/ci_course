@@ -15,6 +15,9 @@
                     <div class="col-lg-12 col-md-12 col-sm-12">
                         <?php echo form_open('WebCart/edit' , array('method'=>'post')); ?>
                         <div class="table-responsive">
+                            <?php 
+                            // print_r($this->cart->contents());
+                             ?>
                             <table class="table table-striped">
                                 <tr>
                                     <td>Del</td>
@@ -23,17 +26,22 @@
                                     <td>Qty</td>
                                     <td></td>
                                 </tr>
-                                <?php foreach ($this->cart->contents() as $cart) {
+                                <?php 
+                                
+
+                                foreach ($this->cart->contents() as $cart) {
                                     
                                  ?>
                                 <tr>
-                                    <td><a href="<?=base_url("WebCart/delete/$cart[rowid]")?>">Del</a></td>
                                     <td>
-                                    <?
-                                    $filepath = "product/pro_{$cart["id"]}01.jpg";
-                                    ?>
+            <a href="<?=base_url("WebCart/delete/$cart[rowid]")?>">Del</a>
+                                    </td>
+                                    <td>
+                <?php
+                $filepath = "product/pro_{$cart["id"]}01.jpg";
+                ?>
                                     <img src="<?=base_url($filepath) ?>" style="max-width:150px;" />
-                                    <?=$lang=='EN'?$cart['options']['EN']:$cart['options']['TH'] ?>
+            <?=$lang=='EN'?$cart['options']['EN']:$cart['options']['TH'] ?>
                                     </td>
                                     <td><?=number_format($cart['price'],0)?></td>
                                     <td>
@@ -41,12 +49,18 @@
                                     <input type="hidden" name="rowid[]" value="<?=$cart['rowid']?>">
                                    
                                     </td>
-                                    <td align="right"><?=number_format($cart['qty']*$cart['price'],0)?></td>
+                                    <td align="right">
+                                        <?=number_format($cart['subtotal'],0)?>     
+                                    </td>
                                 </tr>
                                 <?php } ?>
                                 <tr>
                                     <td colspan="4" align="right">Total : </td>
-                                    <td align="right" style="border-bottom: 4px double #aaa;"><?=number_format($this->cart->total(),0) ?></td>
+                                    <td align="right" style="border-bottom: 4px double #aaa;">
+
+                                        <?=number_format($this->cart->total(),0) ?>
+                                            
+                                        </td>
                                 </tr>
                                 <tr>
                                     <td colspan="5" align="center">

@@ -32,6 +32,9 @@
                     <p>
     <?= $lang=='TH'?$product->pro_desc_th:$product->pro_desc_en; ?>
                     </p>
+                    <div class="qr">
+        <img src="<?=base_url("Qr/index/$product->pro_id") ?>" style="width: 100px; height: 100px;">
+                    </div>
                     <div class="card_area">
                         <?php 
                         $attr = array(
